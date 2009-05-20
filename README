@@ -1,0 +1,56 @@
+INTRODUCTION
+
+This is a jQuery port of Cory Mawhorter's Facelift javascript frontend.
+It requires no changs to the PHP backend.
+
+It lacks many features from the original script but gets the job done 
+for basic image replacement. It benefits from jQuery's features such as 
+the selectors engine, method chaining and other powerful features. 
+Although it doesn't have all the features of the original script, its 
+size is about 25% of the original script.
+
+This is intended for basic image replacement usage. It was created to
+take advantage of jquery's features to reduce size, and also to trim
+down on features that I deemed useless for my purposes. I'll try to 
+keep it up to date with the current stable Facelift version, but dont
+hold your breath.
+
+THIS PLUGIN IS NOT OFFICIALY SUPPORTED BY FACELIFT'S AUTHOR. Don't go
+crazy on the forums if you are using this and something is not working.
+
+LICENSE
+
+This plugin is licensed under the MIT license.
+
+BASIC USAGE
+
+Just select a few elements and call the facelift() function, like this:
+
+$(document).ready(function() {
+	$('h3, span.whatever').facelift({
+		path: '/flir/',
+		font: 'custom_font'});
+	});
+});
+
+The function accepts an object that should contain a 'path' property,
+which is the path to the 'generate.php' file. Also, there is support
+for a 'font' property, created mainly as a workaround for an Opera 
+issue that makes it impossible to retrieve the intended font from CSS.
+
+FUTURE PLANS (in order of priority)
+
+ * Improve the plugin architecture. Passing the path at each function
+call is not what I would call optimal.
+ * Reduce the code size even more
+ * Implementing hover events
+ * Allow more customization when calling the facelift() function. 
+Currently I rely almost entirely on CSS rules for layout.
+ * Try to figure out a workaround for Opera (see BASIC USAGE)
+
+CONTACT
+
+This project is hosted on github. You can contact me there:
+http://github.com/saboya/
+
+Copyright (c) 2009 Rodrigo Saboya
